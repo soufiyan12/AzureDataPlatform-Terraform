@@ -21,11 +21,28 @@
 + variables.tf
 
 # Gestion des variables
-+ .tfvars
-+ terraform.json
++ cmd -var variable="value"
++ cmd -var-file="file.tfvars"
++ 
++ TF_VAR :
++ terraform.tfvars
++ terraform.tfvars.json
++ *.auto.tfvars
++ *.auto.tfvars.json
 + 
 
-# terraform.tfstate : Contient l'etat d'infrastructure deployee et sa configuration 
+# terraform.tfstate : 
++ Contient une correspondance entre les ressources dans fichier de configuration et leur représentation réel 
++ Permet de comparer entre l'etat existant et les changements ajoutee au fichier de conf*
+
+# Les etapes cles de terraform
++ init 
++ validate
++ plan
++ apply
+
+
+
 
 
 
